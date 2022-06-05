@@ -1,0 +1,313 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+html,
+body,
+h1,
+h2,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #999;
+    font-family: "Georgia", "游明朝", "YuMincho", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+/* cssリセット END */
+
+.black {
+    color: #333;
+}
+
+.yellow:hover {
+    transition: all 0.2s;
+    color: #c49029;
+}
+
+.wrap {
+    max-width: 1035px;
+    margin: 0px auto;
+    padding: 63px 5% 5%;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 90px;
+}
+
+h1 {
+    margin-bottom: 11px;
+    text-align: left;
+    font-size: 36px;
+}
+
+.downOpacity {
+    transition: all 0.5s;
+}
+
+.downOpacity:hover {
+    opacity: 0.5;
+}
+
+.Opacity {
+    transition: all 0.5s;
+}
+
+.Opacity:hover,
+.footerEndText:hover {
+    color: #333;
+}
+
+.arrow {
+    position: relative;
+    padding-right: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.arrow::after {
+    content: '';
+    display: block;
+    width: 5px; /* 矢印の大きさの指定 */
+    height: 5px; /* 矢印の大きさの指定 */
+    border-top: 1.5px solid #333; /* 矢印の太さの指定 */
+    border-left: 1.5px solid #333; /* 矢印の太さの指定 */
+}
+
+.arrow--right::after {
+    transform: rotate(225deg); /* 矢印の角度の指定 */
+    position: absolute; /* 矢印の位置の指定 */
+    right: 0; /* 矢印の位置の指定 */
+    top: 5px; /* 矢印の位置の指定 */
+}
+
+.nav,
+.nav ul {
+    display: flex;
+}
+
+.nav {
+    padding-bottom: 85px;
+}
+
+.navTitle {
+    margin-right: 18%;
+}
+
+.theme {
+    font-size: 18px;
+    color:#777;
+}
+
+.navUl {
+    align-items: end;
+}
+
+li {
+    list-style: none;
+    font-size: 17px;
+    margin-right: 25px;
+}
+
+.themeImage {
+    margin-bottom: 90px;
+}
+
+.themeText {
+    font-size: 27px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.main {
+    border-bottom: 0.5px solid #777;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.date {
+    font-size: 17px;
+    padding-right: 50px;
+}
+
+.mainContent {
+    width: 65%;
+}
+
+.mainContentH2 {
+    margin-bottom: 24px;
+}
+
+.mainContentP {
+    line-height: 2.0;
+}
+
+.pageLink {
+    padding: 20px 0 100px;
+}
+
+.pageSpan {
+    display: inline-block;
+    padding: 15px 18px;
+    margin-right: 5px;
+    border: 0.5px solid #777;
+}
+
+.pageSpan1 {
+    background-color: #eee;
+}
+
+.footer-area {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding-top: 50px;
+    line-height: 1.8;
+    border-bottom: 0.5px solid #777;
+}
+
+.footerWrap {
+    width: 55%;
+    padding-right: 70px;
+}
+
+.footerProfileArea {
+    margin-bottom: 20px;
+}
+
+.imageArea {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footerProfile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profileName {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 25px;
+}
+
+.name {
+    margin-bottom: 25px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footerRight {
+    width: 45%;
+    padding-right: 40px;
+}
+
+.footerH2 {
+    margin-bottom: 30px;
+}
+
+.footerNew {
+    display: block;
+    width: 50%;
+}
+
+.footerNewUl {
+    display: block;
+}
+
+.footerNewLi {
+    margin-bottom: 30px;
+}
+
+.post {
+    display: inline-block;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.postDate {
+    display: block;
+}
+
+.footerCategoryWrap {
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+.footerCategory {
+    margin-bottom: 100px;
+}
+
+.footerCategoryLi {
+    margin-bottom: 10px;
+}
+
+.search {
+        width: 100%; /*親要素いっぱい広げる*/
+        padding: 10px 15px; /*ボックスを大きくする*/
+        font-size: 16px;
+        border-radius: 3px; /*ボックス角の丸み*/
+        border: 1px solid #ddd; /*枠線*/
+        box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+.footerEndWrap {
+    padding: 80px 0;
+}
+
+.footerEndWrapLogo {
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    padding-bottom: 20px;
+}
+
+.footerEndWrapLogo a {
+    margin-right: 10px;
+}
+
+.footerEndTextWrap {
+    display: inline-block;
+    width: 80%;
+}
+
+.footerEndText {
+    color: #666;
+}
+
+@media screen and (max-width: 845px) {
+    .nav ul {
+        display: flex;
+    }
+}
