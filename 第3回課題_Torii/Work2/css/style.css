@@ -37,11 +37,15 @@ img {
 
 /* cssリセット END */
 
+.body {
+    background-color: #eeeeee;
+    /* 背景色は全体に適用する */
+}
+
 .wrap {
     max-width: 960px;
     margin: 0px auto;
     padding: 0 5% 5%;
-    background-color: #eeeeee;
 }
 
 h1 {
@@ -64,7 +68,8 @@ p {
 
 .nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* ↑.contentの方で右側にマージンを取っているため、space-between;は不要。(同じ処理になる) */
 }
 
 .content {

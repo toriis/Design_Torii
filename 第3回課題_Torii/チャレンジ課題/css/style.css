@@ -307,7 +307,16 @@ li {
 }
 
 @media screen and (max-width: 845px) {
+    .nav {
+        display:inline-block;
+        text-align: left;
+    }
+
     .nav ul {
         display: flex;
+    }
+
+    .navTitle {
+        margin-right: 7%;
     }
 }
