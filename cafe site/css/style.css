@@ -117,7 +117,7 @@ body {
     font-size: 82px;
     letter-spacing: 0.09em;
     line-height: 1.17;
-    width: 87.2%;
+    /* width: 87.2%; ---widthで改行調節ではなく、<br>にて改行　*/
     margin: 62px auto 0;
 }
 
@@ -125,7 +125,6 @@ body {
     font-size: 23px;
     letter-spacing: 0.09em;
     line-height: 1.65;
-    width: 84.4%;
     margin: 37px auto 0;
 }
 
@@ -142,8 +141,12 @@ body {
     margin: 0 auto;
 }
 
+.aboutUs_contents > p {
+    width: 50%; /* ここで％を指定することによって可変にする */
+}
+
 .aboutUs_contents p img {
-    width: 500px;
+    /* width: 500px; ここで固定値を取ってしまうと可変にならない*/
     border-radius: 0 0 80px 0;
 }
 
@@ -238,7 +241,7 @@ body {
     margin-bottom: 0;
 }
 
-.event_text p {
+.event_text li {
     font-size: 23px;
 }
 
@@ -271,7 +274,7 @@ body {
     padding: 80px 10px;
 }
 
-.footer_wrap small {
+.footer_wrap > p {
     display: inline-block;
     margin-top: 83px;
     font-size: 16px;
