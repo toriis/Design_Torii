@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+figure,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #4f260b;
+    font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* 共通部分 */
+body {
+    background: #E8D9BF;
+    overflow-x: hidden;
+}
+
+.common {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+    align-items: center;
+}
+
+/* ヘッダー */
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6.53% 0 2.51%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header_logo {
+    width: 226.76px;
+}
+
+.pc_nav ul {
+    display: flex;
+}
+
+.pc_nav ul li {
+    width: 104px;
+    margin-right: 55px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+.pc_nav ul li:last-child {
+    margin-right: 0;
+}
+
+.slider img {
+    width: 100%; /* 2000px以上になってもTOPの画像を拡大して表示 */
+}
+
+/* ホームテキスト部分 */
+.home-text {
+    padding: 105px 10px 50px;
+}
+
+.home-text1 {
+    font-size: 30px;
+}
+
+.home-text2 {
+    font-size: 82px;
+    letter-spacing: 0.09em;
+    line-height: 1.17;
+    width: 87.2%;
+    margin: 62px auto 0;
+}
+
+.home-text3 {
+    font-size: 23px;
+    letter-spacing: 0.09em;
+    line-height: 1.65;
+    width: 84.4%;
+    margin: 37px auto 0;
+}
+
+/* ABOUT US */
+.aboutUs_wrap {
+    padding: 50px 10px 54px;
+}
+
+.aboutUs_contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.aboutUs_contents p img {
+    width: 500px;
+    border-radius: 0 0 80px 0;
+}
+
+.aboutUs_text {
+    text-align: left;
+    width: 41%;
+}
+
+.aboutUs_title {
+    line-height: 1.48;
+    font-size: 44px;
+    width: 86%;
+    margin-top: 8.6%;
+}
+
+.aboutUs_text figcaption {
+    font-size: 16px;
+    line-height: 1.625;
+    margin-top: 24.5px;
+}
+
+/* MENU */
+.menu_wrap {
+    padding: 54px 10px 49px;
+}
+
+.menu_contents {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 48px;
+}
+
+.menu_contents h3 {
+    font-weight: normal;
+    font-size: 38px;
+    margin-top: -13px;
+    margin-left: 14px;
+    color: #D30202;
+}
+
+.menu_contents figcaption {
+    font-size: 17px;
+    line-height: 1.47;
+    margin-top: 13px;
+}
+
+.menu {
+    width: 30%;
+}
+
+.menu img {
+    border-radius: 0 50px 0 0;
+}
+
+/* GALLERY */
+.gallery_wrap {
+    padding: 49px 0 0 0;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    margin-top: 26px;
+}
+
+.gallery img {
+    width: 100vw;
+}
+
+/* EVENT */
+.event_wrap {
+    padding: 71px 10px 39px;
+}
+
+.event_contents {
+    margin-top: 41px;
+    padding: 3.7% 0;
+    background: #FFFFFF;
+    border: 3.6px solid #4F260B;
+    
+}
+
+.event_text {
+    display: flex;
+    /* width: 67%; */
+    width: 69.5%;
+    margin: 0 auto 2.1%;
+}
+
+.event_text:last-child {
+    margin-bottom: 0;
+}
+
+.event_text p {
+    font-size: 23px;
+}
+
+.event_text_right {
+    margin-left: 56px;
+    text-decoration: underline;
+}
+
+/* ACCESS */
+.access_wrap {
+    text-align: center;
+    padding: 39px 0 0 0;
+}
+
+.access_contents {
+    margin-top: 46px;
+}
+
+.access_contents iframe {
+    width: 100%;
+    height: 471px;
+}
+
+/* footer */
+.footer_color {
+    background: #FFFFFF;
+}
+
+.footer_wrap {
+    padding: 80px 10px;
+}
+
+.footer_wrap small {
+    display: inline-block;
+    margin-top: 83px;
+    font-size: 16px;
+}
+
+.footer_contents {
+    display: flex;
+}
+
+.footer_text {
+    text-align: left;
+    margin-left: 6.5%;
+}
+
+.footer_text p {
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+/* topへ戻るボタン */
+.top_back {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+}
