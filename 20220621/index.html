@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+
+    <style>
+        .btn {
+            text-align: center;
+            background: #f00;
+            color: #fff;
+            border-radius: 30px;
+            width: 200px;
+            cursor: pointer;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        .blue {
+            background: blue;
+        }
+    </style>
+
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>赤くなる</p>
+    <h1>jQuery</h1>
+    <div class="btn">ボタン</div>
+
+
+    <script>
+        $(function () {
+            $('p').css('color', '#f00');
+
+            // クリックしたら
+            $('.btn').click(function () {
+                $('h1').slideToggle();
+                $('.btn').toggleClass('blue');
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

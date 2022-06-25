@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <div class="header_wrap">
+        <div class="header_wrap" id="js-header">
             <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="デザインカフェのロゴ"></h1>
             <nav class="pc_nav">
                 <ul>
@@ -27,9 +27,24 @@
                     <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
+            <div class="btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#aboutUs">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
         </div>
-        <ul class="slider">
-            <li><img src="images/pc_first-100.jpg" alt="カフェの様子"></li>
+        <ul class="slider" id="js-mainVisual">
+            <li>
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                </picture>
+            </li>
         </ul>
     </header>
 
@@ -37,17 +52,22 @@
         <section>
             <p class="home-text1">Have a happy day From a cup of coffee.</p>
             <p class="home-text2">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
-            <p class="home-text3">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+            <p class="home-text3">
+                毎日を丁寧に大切に過ごしたい。<span>だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</span></p>
         </section>
     </div><!-- END home-text common -->
 
     <section id="aboutUs" class="aboutUs_wrap common">
+        <h2 class="aboutUs_img_sp"><img src="images/about_us@2x.png" alt="ABOUT USロゴ画像"></h2>
         <figure class="aboutUs_contents">
-            <p><img src="images/pc_about-100.jpg" alt="マグカップの写真"></p>
+            <picture>
+                <source srcset="images/about_us@2x-100.jpg" media="(max-width:767px)">
+                <img src="images/pc_about-100.jpg" alt="マグカップの写真">
+            </picture>
 
             <div class="aboutUs_text">
-                <h2><img src="images/about_us@2x.png" width="272px" alt="ABOUT USロゴ画像"></h2>
-                <p class="aboutUs_title">私たちが提供するこだわりのコーヒー</p>
+                <h2 class="aboutUs_img_pc"><img src="images/about_us@2x.png" width="272px" alt="ABOUT USロゴ画像"></h2>
+                <p class="aboutUs_title">私たちが提供する<br>こだわりのコーヒー</p>
                 <figcaption>
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                 </figcaption>
@@ -87,13 +107,13 @@
     <section id="gallery" class="gallery_wrap">
         <h2><img src="images/gallery@2x.png" width="245px" alt="GALLERYロゴ画像"></h2>
         <figure class="gallery_contents">
-            <div class="gallery">
-                <p><img src="images/pc_gallary_05-100.jpg" alt="店内の画像1"></p>
-                <p><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆の画像"></p>
-                <p><img src="images/pc_gallary_03-100.jpg" alt="店内の画像2"></p>
-                <p><img src="images/pc_gallary_02-100.jpg" alt="店内の画像3"></p>
-                <p><img src="images/pc_gallary_01-100.jpg" alt="カフェオレの画像"></p>
-            </div>
+            <ul class="slider slider-gallery">
+                <li class="slider-item slider-item01"><img src="images/pc_gallary_05-100.jpg" alt="店内の画像1"></li>
+                <li class="slider-item slider-item02"><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆の画像"></li>
+                <li class="slider-item slider-item03"><img src="images/pc_gallary_03-100.jpg" alt="店内の画像2"></li>
+                <li class="slider-item slider-item04"><img src="images/pc_gallary_02-100.jpg" alt="店内の画像3"></li>
+                <li class="slider-item slider-item05"><img src="images/pc_gallary_01-100.jpg" alt="カフェオレの画像"></li>
+            </ul>
         </figure>
     </section><!-- END gallery_wrap -->
 
@@ -147,6 +167,7 @@
     <!-- jQuery読み込み -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- 自作JavaScriptファイル読み込み -->
     <script src="JavaScript/app.js"></script>
