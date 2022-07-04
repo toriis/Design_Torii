@@ -9,6 +9,14 @@
     <meta name="description" content="デザスタのプログラミング授業、第4回目課題です。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- slick(スライダー)CSS読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <!-- lightbox CSS読み込み -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -47,6 +55,12 @@
                 <picture>
                     <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
                     <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                </picture>
+            </li>
+            <li>
+                <picture>
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/slider_2.jpg" alt="カフェの様子">
                 </picture>
             </li>
         </ul>
@@ -111,12 +125,24 @@
     <section id="gallery" class="gallery_wrap">
         <h2><img src="images/gallery@2x.png" width="245px" alt="GALLERYロゴ画像"></h2>
         <figure class="gallery_contents">
-            <ul class="slider slider-gallery">
-                <li class="slider-item slider-item01"><img src="images/pc_gallary_05-100.jpg" alt="店内の画像1"></li>
-                <li class="slider-item slider-item02"><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆の画像"></li>
-                <li class="slider-item slider-item03"><img src="images/pc_gallary_03-100.jpg" alt="店内の画像2"></li>
-                <li class="slider-item slider-item04"><img src="images/pc_gallary_02-100.jpg" alt="店内の画像3"></li>
-                <li class="slider-item slider-item05"><img src="images/pc_gallary_01-100.jpg" alt="カフェオレの画像"></li>
+            <ul class="slider2 slider-gallery">
+                <li class="slider-item slider-item01"><a href="images/pc_gallary_05-100.jpg" data-lightbox="gallery"
+                        data-title="店内の画像"><img src="images/pc_gallary_05-100.jpg" alt="店内の画像1"></a></li>
+
+                <li class="slider-item slider-item02"><a href="images/pc_gallary_04-100.jpg" data-lightbox="gallery"
+                        data-title="コーヒー豆"><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆の画像"></a></li>
+
+                <li class="slider-item slider-item03"><a href="images/pc_gallary_03-100.jpg" data-lightbox="gallery"
+                        data-title="内観"><img src="images/pc_gallary_03-100.jpg" alt="店内の画像2"></a></li>
+
+                <li class="slider-item slider-item04"><a href="images/pc_gallary_02-100.jpg" data-lightbox="gallery"
+                        data-title="看板"><img src="images/pc_gallary_02-100.jpg" alt="店内の画像3"></a></li>
+
+                <li class="slider-item slider-item05"><a href="images/pc_gallary_01-100.jpg" data-lightbox="gallery"
+                        data-title="ドリップコーヒー"><img src="images/pc_gallary_01-100.jpg" alt="カフェオレの画像"></a></li>
+
+                <li class="slider-item slider-item06"><a href="images/lunch.png" data-lightbox="gallery"
+                        data-title="ランチプレート"><img src="images/lunch.png" alt="ランチプレート"></a></li>
             </ul>
         </figure>
     </section><!-- END gallery_wrap -->
@@ -169,7 +195,12 @@
     <!-- jQuery読み込み -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- スライダー(slick)読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- lightboxをネット上から読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
 
     <!-- 自作JavaScriptファイル読み込み -->
     <script src="JavaScript/app.js"></script>

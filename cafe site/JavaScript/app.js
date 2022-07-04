@@ -61,3 +61,34 @@ $(function() {
     });
 });
 // END--ハンバーガーメニュー表示・非表示
+
+// スライダー
+$(function() {
+    $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2500,
+        dots: true,
+        arrows: false,
+        pauseOnFocus: false,
+        pauseOnHover: false
+    });
+
+    $('.slider2').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        arrows: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 768, // 767px以下のサイズに適用
+                settings: {
+                slidesToShow: 1,
+                },
+            },
+        ],
+    });
+});
+// END--スライダー
