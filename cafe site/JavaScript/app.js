@@ -78,7 +78,7 @@ $(function() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2500,
-        arrows: false,
+        arrows: true,
         pauseOnFocus: false,
         pauseOnHover: false,
         responsive: [

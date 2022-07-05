@@ -69,6 +69,12 @@ body {
     display: none;
 }
 
+/* レイアウト崩れ調整 */
+/* ガタつく挙動も抑える */
+.slick-slide img {
+    width: 100%;
+}
+
 .slider.slick-initialized{
     display: block; /*slick-initializedが付与されたら表示*/
 }
@@ -91,6 +97,21 @@ body {
 
 .lb-data .lb-number {
     display: none !important;
+}
+
+.slick-prev {
+    left: calc((100vw - 98vw) / 2);
+    /*left: 15px;*/
+    z-index: 100;
+}
+.slick-next {
+    right: calc((100vw - 97vw) / 2); /* スクロールバーに被らないよう、左矢印とは位置が違う */
+    /*right: 15px;*/
+    z-index: 99;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 25px;/* 矢印の大きさを少し大きくする */
 }
 
 /* ヘッダー */
@@ -666,5 +687,11 @@ body {
         width: 100px;
         bottom: 10px;
         right: 10px;
+    }
+
+    .slick-next {
+        right: calc((100vw - 95vw) / 2); /* スクロールバーに被らないよう、左矢印とは位置が違う */
+        /*right: 15px;*/
+        z-index: 99;
     }
 }
