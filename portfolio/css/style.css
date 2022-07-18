@@ -1,0 +1,552 @@
+@charset "utf-8";
+
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+figure,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #333333;
+    font-family: fot-tsukuardgothic-std,"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    /* FOT-筑紫A丸ゴシック Std　B
+    font-family: fot-tsukuardgothic-std,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    */
+
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* 共通部分 */
+body {
+    overflow-x: hidden;
+}
+
+.common {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+    align-items: center;
+}
+
+/* スライダー調整 */
+.slider {
+    display: none;
+}
+
+/* レイアウト崩れ調整 */
+/* ガタつく挙動も抑える */
+.slick-slide img {
+    width: 100%;
+}
+
+.slider.slick-initialized{
+    display: block; /*slick-initializedが付与されたら表示*/
+}
+
+.slick-dots {
+    bottom: 25px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+.slick-dots li button:before {
+    color: #fff;
+}
+
+.slider2 {
+    display: flex;
+}
+
+.lb-data .lb-number {
+    display: none !important;
+}
+
+.slick-prev {
+    left: calc((100vw - 98vw) / 2);
+    /*left: 15px;*/
+    z-index: 100;
+}
+.slick-next {
+    right: calc((100vw - 97vw) / 2); /* スクロールバーに被らないよう、左矢印とは位置が違う */
+    /*right: 15px;*/
+    z-index: 99;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 25px;/* 矢印の大きさを少し大きくする */
+}
+
+/* ファーストビュー */
+.first_view * {
+    color: #FFFFFF;
+}
+
+/* （画像よりも下までスクロールした時に変えたい背景色） */
+/* jQueryにてクラスを付与・除去する */
+.headerColor-default {
+    background: #4f260b;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 4.245% 1% 4.465%;
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color .3s;
+    z-index: 100;
+}
+
+.header_logo {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 35px; /* IE対策 */
+    font-size: clamp(9px, 3vw, 35px);
+    min-height: 0vw; /* Safari clamp関数対策 */
+    line-height: 2;
+    letter-spacing: 0.67em;
+}
+
+.header_skill_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /*上下左右中央寄せ*/
+    width: 22.401%;
+    height: 23.3%;
+    text-align: center;
+}
+
+.header_skill_wrapper > p {
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 35px; /* IE対策 */
+    font-size: clamp(9px, 2vw, 35px);
+    min-height: 0vw; /* Safari clamp関数対策 */
+    letter-spacing: 0.6em;
+}
+
+.header_skill_text {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    height: 91%;
+    background: rgba(0,0,0,0.35);
+}
+
+.pc_nav ul {
+    display: flex;
+}
+
+.pc_nav ul li {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 40px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.22em;
+}
+
+.pc_nav ul li:last-child {
+    margin-right: 0;
+}
+
+/* ファーストビュー動画 */
+.wrap-video{
+    position:relative;
+}
+
+.wrap-video video{
+    width: 100%;
+}
+
+/* スライダーimage */
+.slider img {
+    width: 100%; /* 2000px以上になってもTOPの画像を拡大して表示 */
+    /* height: auto; */
+}
+
+/* topへ戻るボタン */
+.top_back {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 80;
+}
+
+.sp_nav {
+    display: none;
+}
+
+.btn {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+
+    .btn {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 5%;
+        height: 30px;
+        z-index: 100;
+    }
+
+    .btn span {
+        background: #fff;
+        width: 33px;
+        height: 3px;
+        display: block;
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    .btn span::before,
+    .btn span::after {
+        content:'';
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        display: block;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .btn span::before {
+        bottom: 10px;
+    }
+
+    .btn span::after {
+        top: 10px;
+    }
+
+    .open span {
+        background: transparent;/* transparent→透明にする */
+    }
+
+    .open span::before {
+        transform: rotate(45deg);
+        bottom: 0px;
+    }
+
+    .open span::after {
+        transform: rotate(135deg);
+        top: 0px;
+    }
+
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 90;
+    }
+
+    .sp_nav ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .sp_nav li {
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        padding: 20px 0;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    }
+
+    .home-text2 {
+        font-size: 7vw;
+    }
+
+    .home-text3 {
+        font-size: 2vw;
+    }
+
+    .aboutUs_title {
+        font-size: 4vw;
+    }
+
+    .event_text_right {
+        text-align: left;
+        white-space:nowrap;
+        width:100%;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header_logo img {
+        width: 80%;
+        padding-left: 2.6%;
+    }
+
+    .home-text {
+        padding: 10% 10px 5%;
+    }
+
+    .home-text1 {
+        font-size: 4.5vw;
+    }
+
+    .home-text2 {
+        text-align: center;
+        margin: 7% auto 0;
+        font-size: 8.5vw;
+    }
+
+    .home-text3 {
+        margin: 4.3% auto 0;
+        font-size: 4.5vw;
+    }
+
+    .home-text3 span {
+        display: block;
+    }
+
+    .aboutUs_wrap {
+        padding: 8% 5.33% 0;
+    }
+
+    .aboutUs_img_sp {
+        display: flex;
+        margin: 0 auto;
+        width: 42.6%;
+    }
+
+    .aboutUs_contents {
+        padding-top: 1.77%;
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .aboutUs_contents > picture img {
+        max-width: none;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        border-radius: 0 0 0 0;
+    }
+
+    .aboutUs_text {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .aboutUs_text > figcaption {
+        font-size: 4.2vw;
+        margin-top: 5%;
+        text-align: justify;
+        text-justify: inter-ideograph;
+    }
+
+    .aboutUs_img_pc {
+        display: none;
+    }
+
+    .aboutUs_title {
+        line-height: 1.25;
+        font-size: 9.5vw;
+        margin-top: 8.6%;
+    }
+
+    .menu_wrap {
+        padding: 10% 9.86% 2.5%;
+    }
+
+    .menu_wrap > h2 img {
+        width: 23.2%;
+    }
+    
+    .menu_contents {
+        display: block;
+        margin-top: 22px;
+    }
+
+    .menu_contents h3 {
+        font-size: 10vw;
+        margin-top: -4.5%;
+    }
+
+    .menu {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .menu img {
+        width: 100%;
+    }
+
+    .menu_contents figcaption {
+        font-size: 4.7vw;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        line-height: 1.58;
+        margin: 5% 0 20%;
+    }
+
+    .gallery_wrap {
+        padding: 2.5% 0 0 0;
+    }
+    
+    .slider-gallery {
+        display: block;
+        margin-top: 4%;
+    }
+
+    .slider-gallery img {
+        width: 100%;
+    }
+
+    .gallery_wrap > h2 img {
+        width: 37.8%;
+    }
+
+    .event_wrap {
+        padding: 8.41% 5.33% 4.02%;
+    }
+
+    .event_wrap > h2 img {
+        width: 26.6%;
+    }
+    
+    .event_contents {
+        padding: 8% 8%;
+        margin-top: 4%;
+    }
+    
+    .event_text {
+        display: block;
+        width: 100%;
+        margin: 0 auto 30px;
+    }
+    
+    .event_text li {
+        font-size: 4vw;
+        text-align: left;
+    }
+    
+    .event_text_right {
+        margin-left: 0;
+        text-decoration: underline;
+    }
+
+    .access_wrap {
+        padding: 4.02% 0 0 0;
+    }
+
+    .access_wrap > h2 img {
+        width: 33%;
+    }
+    
+    .access_contents {
+        padding-top: 50%;
+        margin-top: 11px;
+    }
+
+    .footer_wrap {
+        padding: 9.67% 5.33%;
+    }
+    
+    .footer_wrap > p {
+        font-size: 4.2vw;
+        margin-top: 10%;
+    }
+    
+    .footer_contents {
+        text-align: left;
+        display: block;
+    }
+    
+    .footer_contents > h2 img {
+        width: 60.2%;
+    }
+
+    .footer_text {
+        margin: 9.72% 0 0;
+    }
+    
+    .footer_text p {
+        font-size: 4.2vw;
+        margin-bottom: 4%;
+    }
+
+    .top_back {
+        width: 100px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .slick-next {
+        right: calc((100vw - 95vw) / 2); /* スクロールバーに被らないよう、左矢印とは位置が違う */
+        /*right: 15px;*/
+        z-index: 99;
+    }
+}
